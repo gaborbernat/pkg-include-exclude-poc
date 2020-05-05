@@ -1,0 +1,1 @@
+print("\tXXX load foo")
