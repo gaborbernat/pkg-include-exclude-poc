@@ -18,9 +18,8 @@ class BackendImporter(FileFinder):
 
 
 def finder(path):
-    if path.startswith(
-        src_at
-    ):  # anything under the backend provided src folder is handled by us
+    # anything under the backend provided src folder is handled by us
+    if path.startswith(src_at):
         return BackendImporter(path, (SourceFileLoader, SOURCE_SUFFIXES))
     raise ImportError
 
